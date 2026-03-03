@@ -1,0 +1,107 @@
+"use client";
+
+import { Briefcase, GraduationCap } from "lucide-react";
+
+export default function Experience() {
+    const experiences = [
+        {
+            company: "Arthur J. Gallagher",
+            role: "Business Process Analyst",
+            period: "Mar 2024 – Nov 2024",
+            description: "Designed Power BI dashboards, eliminating 15+ manual hours per week. Reduced ad-hoc data requests by 40% through self-service reporting ecosystems.",
+        },
+        {
+            company: "Wipro",
+            role: "Business Process Associate II",
+            period: "Mar 2023 – Mar 2024",
+            description: "Automated 23+ client compliance reports, increasing data accuracy by 12.5%. Facilitated UAT and process mapping workshops.",
+        },
+        {
+            company: "Wipro",
+            role: "Process Analyst",
+            period: "Nov 2021 – Mar 2023",
+            description: "Managed delivery timelines across 12 concurrent projects, enhancing on-time completion by 15% through predictive risk analysis.",
+        }
+    ];
+
+    const education = [
+        {
+            institution: "Northumbria University, London",
+            degree: "MSc Business Analytics",
+            period: "Jan 2025 – Jan 2026",
+        },
+        {
+            institution: "KLE Society’s S Nijalingappa College",
+            degree: "Bachelor of Business Administration",
+            period: "May 2018 – Oct 2021",
+        },
+        {
+            institution: "ALVA’s PU College",
+            degree: "Commerce (SEBA)",
+            period: "Apr 2016 – Mar 2018",
+        }
+    ];
+
+    return (
+        <section className="relative z-20 bg-[#121212] pt-16 pb-32 px-6 border-t border-white/5">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+
+                {/* Experience Column */}
+                <div>
+                    <div className="flex items-center gap-4 mb-12">
+                        <div className="p-3 rounded-xl bg-white/5 border border-white/10">
+                            <Briefcase className="w-6 h-6 text-white/80" />
+                        </div>
+                        <h3 className="text-3xl md:text-4xl font-bold tracking-tight text-white">Work Experience</h3>
+                    </div>
+
+                    <div className="space-y-12 border-l border-white/10 pl-8 ml-4 relative">
+                        {experiences.map((exp, i) => (
+                            <div key={i} className="relative">
+                                {/* Timeline dot */}
+                                <div className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-[#121212] border-2 border-white/30" />
+
+                                <div className="flex flex-col md:flex-row md:items-center justify-between gap-2 mb-2">
+                                    <h4 className="text-xl font-semibold text-white">{exp.role}</h4>
+                                    <span className="text-sm font-mono text-white/40">{exp.period}</span>
+                                </div>
+                                <div className="text-white/60 font-medium mb-3">{exp.company}</div>
+                                <p className="text-white/50 leading-relaxed text-sm">
+                                    {exp.description}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+                {/* Education Column */}
+                <div>
+                    <div className="flex items-center gap-4 mb-12">
+                        <div className="p-3 rounded-xl bg-white/5 border border-white/10">
+                            <GraduationCap className="w-6 h-6 text-white/80" />
+                        </div>
+                        <h3 className="text-3xl md:text-4xl font-bold tracking-tight text-white">Education</h3>
+                    </div>
+
+                    <div className="space-y-12 border-l border-white/10 pl-8 ml-4 relative">
+                        {education.map((edu, i) => (
+                            <div key={i} className="relative">
+                                {/* Timeline dot */}
+                                <div className="absolute -left-[41px] top-1.5 w-4 h-4 rounded-full bg-[#121212] border-2 border-white/30" />
+
+                                <div className="flex flex-col md:flex-row md:items-start justify-between gap-2 mb-2">
+                                    <h4 className="text-xl font-semibold text-white">{edu.degree}</h4>
+                                    <span className="text-sm font-mono text-white/40 whitespace-nowrap">{edu.period}</span>
+                                </div>
+                                <div className="text-white/60 font-medium leading-relaxed">
+                                    {edu.institution}
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    );
+}
