@@ -4,10 +4,10 @@ import { ArrowUpRight } from "lucide-react";
 
 export default function Projects() {
     const cases = [
-        { title: "HR Analytics Dashboard", category: "Power BI & Data Viz", year: "2024" },
-        { title: "Nike/Walmart Sales Analysis", category: "SQL & Analytics", year: "2023" },
-        { title: "Scalable Web Apps on K8s", category: "IBM Certification", year: "2024" },
-        { title: "Business Analysis Foundation", category: "IIBA Certification", year: "2024" },
+        { title: "HR Analytics Dashboard", category: "Power BI & Data Viz", year: "2024", link: "https://public.tableau.com/views/PrithviJayaprakash-HRAnalyticsDashboard/HRAnalyticsDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" },
+        { title: "Nike/Walmart Sales Analysis", category: "SQL & Analytics", year: "2023", link: "https://public.tableau.com/views/NikeSoldtooLessinIndia_Letsseewhy/NikeSalesDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link" },
+        { title: "DevOps Fundamentals", category: "IBM Certification", year: "2024", link: "https://courses.staragile.skillsnetwork.site/certificates/cb594ffb3a724fe3a15f84f80b9ea42c" },
+        { title: "Business Analysis Foundation", category: "IIBA Certification", year: "2024", link: "https://www.linkedin.com/learning/certificates/623267d8edb39c3df8c3e524d26fcfd4bacf95f2860d52adf88a6f55bd705e72?trk=share_certificate" },
     ];
 
     return (
@@ -17,9 +17,12 @@ export default function Projects() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {cases.map((project, i) => (
-                        <div
+                        <a
                             key={i}
-                            className="group relative h-96 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md overflow-hidden transition-all duration-500 hover:border-white/30 hover:bg-white/10 cursor-pointer flex flex-col justify-between p-8"
+                            href={project.link}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="group relative h-96 py-8 px-8 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md overflow-hidden transition-all duration-500 hover:border-white/30 hover:bg-white/10 cursor-pointer flex flex-col justify-between block"
                         >
                             {/* Subtle hover glow */}
                             <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
@@ -35,7 +38,7 @@ export default function Projects() {
                                     <ArrowUpRight className="w-6 h-6 text-white" />
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     ))}
                 </div>
             </div>
