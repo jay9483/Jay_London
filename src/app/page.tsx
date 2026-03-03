@@ -6,6 +6,9 @@ import ScrollyCanvas from "@/components/ScrollyCanvas";
 import Overlay from "@/components/Overlay";
 import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
+import SkillsMarquee from "@/components/SkillsMarquee";
+import Footer from "@/components/Footer";
+import FloatingContact from "@/components/FloatingContact";
 
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -17,6 +20,8 @@ export default function Home() {
 
   return (
     <div className="bg-[#121212] min-h-screen selection:bg-white/30 selection:text-white">
+      <FloatingContact />
+
       <div ref={containerRef} className="relative h-[500vh]">
         <div className="sticky top-0 h-screen w-full overflow-hidden">
           <ScrollyCanvas progress={scrollYProgress} />
@@ -25,7 +30,9 @@ export default function Home() {
       </div>
 
       <Experience />
+      <SkillsMarquee />
       <Projects />
+      <Footer />
     </div>
   );
 }

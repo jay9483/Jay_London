@@ -8,19 +8,19 @@ export default function Experience() {
             company: "Arthur J. Gallagher",
             role: "Business Process Analyst",
             period: "Mar 2024 – Nov 2024",
-            description: "Designed Power BI dashboards, eliminating 15+ manual hours per week. Reduced ad-hoc data requests by 40% through self-service reporting ecosystems.",
+            description: <>Designed Power BI dashboards, eliminating <span className="text-emerald-400 font-semibold bg-emerald-400/10 px-1 py-0.5 rounded">15+ manual hours</span> per week. Reduced ad-hoc data requests by <span className="text-emerald-400 font-semibold bg-emerald-400/10 px-1 py-0.5 rounded">40%</span> through self-service reporting ecosystems.</>,
         },
         {
             company: "Wipro",
             role: "Business Process Associate II",
             period: "Mar 2023 – Mar 2024",
-            description: "Automated 23+ client compliance reports, increasing data accuracy by 12.5%. Facilitated UAT and process mapping workshops.",
+            description: <>Automated <span className="text-emerald-400 font-semibold bg-emerald-400/10 px-1 py-0.5 rounded">23+ client compliance reports</span>, increasing data accuracy by <span className="text-emerald-400 font-semibold bg-emerald-400/10 px-1 py-0.5 rounded">12.5%</span>. Facilitated UAT and process mapping workshops.</>,
         },
         {
             company: "Wipro",
             role: "Process Analyst",
             period: "Nov 2021 – Mar 2023",
-            description: "Managed delivery timelines across 12 concurrent projects, enhancing on-time completion by 15% through predictive risk analysis.",
+            description: <>Managed delivery timelines across <span className="text-emerald-400 font-semibold bg-emerald-400/10 px-1 py-0.5 rounded">12 concurrent projects</span>, enhancing on-time completion by <span className="text-emerald-400 font-semibold bg-emerald-400/10 px-1 py-0.5 rounded">15%</span> through predictive risk analysis.</>,
         }
     ];
 
