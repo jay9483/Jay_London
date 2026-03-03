@@ -39,18 +39,18 @@ export default function FloatingNavbar() {
             }}
             animate={hidden ? "hidden" : "visible"}
             transition={{ duration: 0.35, ease: "easeInOut" }}
-            className="fixed top-8 inset-x-0 mx-auto w-fit z-50 flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl"
+            className="fixed top-4 md:top-8 inset-x-0 mx-auto w-fit z-50 flex items-center justify-center gap-1 md:gap-2 px-4 md:px-6 py-2 md:py-3 rounded-full bg-white/5 backdrop-blur-xl border border-white/10 shadow-2xl"
         >
             <button
                 onClick={() => scrollToSection('experience')}
-                className="px-4 py-2 text-sm font-medium text-white/70 hover:text-white transition-colors"
+                className="px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm font-medium text-white/70 hover:text-white transition-colors"
             >
                 Experience
             </button>
-            <div className="w-[1px] h-4 bg-white/20 mx-2" />
+            <div className="w-[1px] h-3 md:h-4 bg-white/20 mx-1 md:mx-2" />
             <button
                 onClick={() => scrollToSection('projects')}
-                className="px-4 py-2 text-sm font-medium text-white/70 hover:text-white transition-colors"
+                className="px-3 md:px-4 py-1.5 md:py-2 text-xs md:text-sm font-medium text-white/70 hover:text-white transition-colors"
             >
                 Projects
             </button>

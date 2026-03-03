@@ -49,8 +49,8 @@ export default function Experience() {
     };
 
     return (
-        <section id="experience" className="relative z-20 bg-[#121212] pt-16 pb-32 px-6 border-t border-white/5">
-            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <section id="experience" className="relative z-20 bg-[#121212] pt-16 pb-24 md:pb-32 px-4 md:px-6 border-t border-white/5">
+            <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-16">
 
                 {/* Experience Column */}
                 <div>

@@ -37,19 +37,19 @@ export default function Projects() {
     ];
 
     return (
-        <section id="projects" className="relative z-20 bg-[#121212] py-32 px-6">
+        <section id="projects" className="relative z-20 bg-[#121212] py-24 md:py-32 px-4 md:px-6">
             <div className="max-w-7xl mx-auto">
                 <motion.h3
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true, margin: "-100px" }}
                     transition={{ duration: 0.6 }}
-                    className="text-3xl md:text-5xl font-bold mb-16 tracking-tight text-white"
+                    className="text-3xl md:text-5xl font-bold mb-12 md:mb-16 tracking-tight text-white max-w-full break-words"
                 >
                     Projects & Certifications
                 </motion.h3>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
                     {cases.map((project, i) => (
                         <motion.a
                             key={i}
@@ -60,7 +60,7 @@ export default function Projects() {
                             href={project.link}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="group relative h-96 py-8 px-8 rounded-2xl border border-white/10 bg-white/5 overflow-hidden transition-all duration-500 hover:border-white/30 cursor-pointer flex flex-col justify-between block"
+                            className="group relative h-80 md:h-96 py-6 px-6 md:py-8 md:px-8 rounded-2xl border border-white/10 bg-white/5 overflow-hidden transition-all duration-500 hover:border-white/30 cursor-pointer flex flex-col justify-between block"
                         >
                             {/* Background Image */}
                             <Image
@@ -74,14 +74,14 @@ export default function Projects() {
                             <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/20 pointer-events-none z-0" />
 
                             <div className="flex justify-between items-start z-10 text-white/70 group-hover:text-white transition-colors">
-                                <span className="text-sm font-mono tracking-wider uppercase drop-shadow-md">{project.category}</span>
-                                <span className="text-sm font-mono drop-shadow-md">{project.year}</span>
+                                <span className="text-xs md:text-sm font-mono tracking-wider uppercase drop-shadow-md">{project.category}</span>
+                                <span className="text-xs md:text-sm font-mono drop-shadow-md">{project.year}</span>
                             </div>
 
                             <div className="z-10 flex justify-between items-end drop-shadow-lg">
-                                <h4 className="text-2xl md:text-4xl font-semibold tracking-tight text-white">{project.title}</h4>
-                                <div className="p-3 rounded-full bg-white/10 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 backdrop-blur-md border border-white/20">
-                                    <ArrowUpRight className="w-6 h-6 text-white" />
+                                <h4 className="text-xl sm:text-2xl md:text-4xl font-semibold tracking-tight text-white">{project.title}</h4>
+                                <div className="p-2 md:p-3 rounded-full bg-white/10 opacity-0 transform translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 backdrop-blur-md border border-white/20">
+                                    <ArrowUpRight className="w-5 h-5 md:w-6 md:h-6 text-white" />
                                 </div>
                             </div>
                         </motion.a>
