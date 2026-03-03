@@ -37,6 +37,9 @@ export const metadata: Metadata = {
   }
 };
 
+import CustomCursor from "@/components/CustomCursor";
+import FloatingNavbar from "@/components/FloatingNavbar";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -47,6 +50,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#121212] text-white`}
       >
+        <CustomCursor />
+        <FloatingNavbar />
         {children}
       </body>
     </html>

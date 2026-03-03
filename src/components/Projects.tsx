@@ -2,6 +2,7 @@
 
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 export default function Projects() {
     const cases = [
@@ -36,14 +37,26 @@ export default function Projects() {
     ];
 
     return (
-        <section className="relative z-20 bg-[#121212] py-32 px-6">
+        <section id="projects" className="relative z-20 bg-[#121212] py-32 px-6">
             <div className="max-w-7xl mx-auto">
-                <h3 className="text-3xl md:text-5xl font-bold mb-16 tracking-tight text-white">Projects & Certifications</h3>
+                <motion.h3
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.6 }}
+                    className="text-3xl md:text-5xl font-bold mb-16 tracking-tight text-white"
+                >
+                    Projects & Certifications
+                </motion.h3>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     {cases.map((project, i) => (
-                        <a
+                        <motion.a
                             key={i}
+                            initial={{ opacity: 0, y: 50 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, margin: "-100px" }}
+                            transition={{ duration: 0.6, delay: i * 0.15 }}
                             href={project.link}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -71,7 +84,7 @@ export default function Projects() {
                                     <ArrowUpRight className="w-6 h-6 text-white" />
                                 </div>
                             </div>
-                        </a>
+                        </motion.a>
                     ))}
                 </div>
             </div>
