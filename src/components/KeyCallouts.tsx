@@ -43,8 +43,8 @@ export default function KeyCallouts() {
     };
 
     return (
-        <section className="relative z-20 bg-[#121212] pt-24 pb-16 px-4 md:px-6">
-            <div className="max-w-7xl mx-auto">
+        <section className="relative z-50 bg-[#121212] pt-24 pb-16 px-4 md:px-6 min-h-[50vh] flex flex-col justify-center">
+            <div className="max-w-7xl mx-auto w-full">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
