@@ -29,7 +29,7 @@ export default function Overlay({ progress }: { progress: MotionValue<number> })
                     Business Analyst
                 </p>
                 <a
-                    href="/Prithvi_Jayaprakash_Bangalore.pdf"
+                    href="/Prithvi_Jayaprakash_Bangalore_v2.pdf"
                     target="_blank"
                     rel="noopener noreferrer"
                     download="Prithvi_Jayaprakash_CV.pdf"
