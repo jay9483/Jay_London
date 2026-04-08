@@ -15,30 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Prithvi Jayaprakash | Business Analyst & Data Specialist",
   description: "Portfolio of Prithvi Jayaprakash, a results-driven Business Analyst specialising in process automation and data visualisation.",
-  metadataBase: new URL("https://jaypru.vercel.app"),
-  openGraph: {
-    type: "website",
-    url: "https://jaypru.vercel.app",
-    title: "Prithvi Jayaprakash | Business Analyst & Data Specialist",
-    description: "Portfolio of Prithvi Jayaprakash, a results-driven Business Analyst specialising in process automation and data visualisation.",
-    siteName: "Prithvi Jayaprakash Portfolio",
-    images: [{
-      url: "/og-image.png",
-      width: 1200,
-      height: 630,
-      alt: "Prithvi Jayaprakash Portfolio",
-    }],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Prithvi Jayaprakash | Business Analyst & Data Specialist",
-    description: "Portfolio of Prithvi Jayaprakash, a results-driven Business Analyst specialising in process automation and data visualisation.",
-    images: ["/og-image.png"],
-  }
 };
-
-import CustomCursor from "@/components/CustomCursor";
-import FloatingNavbar from "@/components/FloatingNavbar";
 
 export default function RootLayout({
   children,
@@ -50,10 +27,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#121212] text-white`}
       >
-        <CustomCursor />
-        <FloatingNavbar />
         {children}
       </body>
     </html>
   );
 }
+
+
+
