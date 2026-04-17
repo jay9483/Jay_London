@@ -28,16 +28,28 @@ export default function Overlay({ progress }: { progress: MotionValue<number> })
                 <p className="text-lg sm:text-xl md:text-2xl text-white/70 font-light tracking-wide uppercase mb-8 md:mb-12 max-w-full break-words">
                     Business Analyst
                 </p>
-                <a
-                    href="/Prithvi_Jayaprakash_Bangalore_v2.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    download="Prithvi_Jayaprakash_CV.pdf"
-                    className="pointer-events-auto px-6 py-3 md:px-8 md:py-4 text-sm md:text-base bg-white text-black font-semibold rounded-full hover:scale-105 transition-transform duration-300 shadow-[0_0_40px_rgba(255,255,255,0.4)] flex items-center gap-2"
-                >
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" x2="12" y1="15" y2="3" /></svg>
-                    Download CV
-                </a>
+                <div className="flex flex-col sm:flex-row items-center gap-4">
+                    <a
+                        href="/Prithvi_Jayaprakash_Bangalore_v2.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        download="Prithvi_Jayaprakash_CV.pdf"
+                        className="pointer-events-auto px-6 py-3 md:px-8 md:py-4 text-sm md:text-base bg-white text-black font-semibold rounded-full hover:scale-105 transition-transform duration-300 shadow-[0_0_40px_rgba(255,255,255,0.4)] flex items-center gap-2"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" x2="12" y1="15" y2="3" /></svg>
+                        Download CV
+                    </a>
+                    
+                    <a
+                        href="https://linkedin.com/in/prithvijayaprakash"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="pointer-events-auto px-6 py-3 md:px-8 md:py-4 text-sm md:text-base bg-[#0077b5]/10 backdrop-blur-md border border-[#0077b5]/30 text-white font-semibold rounded-full hover:bg-[#0077b5]/20 hover:scale-105 transition-all duration-300 flex items-center gap-2 hover:shadow-[0_0_30px_rgba(0,119,181,0.3)]"
+                    >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg>
+                        LinkedIn
+                    </a>
+                </div>
             </motion.div>
 
             {/* Section 2 */}
